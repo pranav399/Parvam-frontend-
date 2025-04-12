@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+        }
+        .head{
+            margin: 0;
+        }
+        #navbar{
+            height: 12vh;
+            width: 100%;
+            display: flex;
+            justify-content:end;
+            align-items: center;
+            background-color: black;
+            position: fixed;
+            z-index: 10;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+        }
+        .nav-but{
+            height: 58px;
+            width: 150px;
+            margin-inline: -3px;
+            font-size: 20px;
+            margin-right: 45px;
+            border: none;
+            background-color: orange;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        .nav-but:hover{
+            background-color: rgb(120, 119, 117);
+            margin-top: 8px;
+        }
+        #welcome-section{
+            height: 100%;
+            width: 100%;
+            padding: 120px;
+            background-color: #000033;
+        }
+        #projects{
+            height: 100%;
+            width: 100%;
+            padding: 100px;
+        }
+
+        #div1{
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #div2{
+            height: 400px;
+            width: 100%;
+            display: flex;
+            margin-top: 8px;
+        }
+        
+        #welcome-section>#div1>h1{
+            height: 12vh;
+            width: 68%;
+            padding-top: 8px;
+            color: aliceblue;
+            font-size: 54px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .half{
+            height: 360px;
+            width: 50%;
+        }
+        #half1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #half1>p{
+            font-size: 29px;
+            text-align: center;
+            color: aliceblue;
+        }
+        #half1>p>span{
+            font-weight: bold;
+            font-size: 55px;
+            color: red;
+        }
+        #half2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .box::before{
+            content: '';
+            position: absolute;
+            width: 160px;
+            height: 100%;
+            background: linear-gradient(90deg,#000033, #330099, #6600cc, #9900ff, #cc00ff);
+            animation: animate 4s linear infinite;
+        }
+        .box::after{
+            content: '';
+            position: absolute;
+            inset: 7px;
+            background-image: url("WhatsApp\ Image\ 2025-04-03\ at\ 07.23.43_7993e886.jpg");
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+        @keyframes animate {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        #projects>.div-h1{
+            font-size: 50px;
+            height: 100px;
+            width: 1400px;
+            margin-top: -10px;
+            text-align: center;
+            color: aliceblue;
+        }
+        #projects>.div-pro{
+            height: 400px;
+            width: 1500px;
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        #projects{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: #1fefe2;
+        }
+        #pro1{
+            height: 320px;
+            width: 1310px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .div-pro>#pro1>.p1{
+            height: 250px;
+            width: 250px;
+            margin-inline: 5px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #9900ff;
+            border-radius: 5px;
+        }
+        #pro1>#id-p1::before{
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 140%;
+            background-color: aqua;
+            animation: animate1 5s linear infinite;
+        }
+        #pro1>#id-p1::after{
+            content: '';
+            position: absolute;
+            inset: 7px;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/022/769/015/small/mix-of-chocolate-on-table-close-up-ai-generated-photo.jpg');
+            border-radius: 5px;
+        }
+        #pro1>#id-p2::before{
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 140%;
+            background-color: aqua;
+            animation: animate1 5s linear infinite;
+        }
+        #pro1>#id-p2::after{
+            content: '';
+            position: absolute;
+            inset: 7px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX1_3zuZSO5dSIAC-3CCqh510G2mdpemqKNw&s');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+        }
+        #pro1>#id-p3::before{
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 140%;
+            background-color: aqua;
+            animation: animate1 5s linear infinite;
+        }
+        #pro1>#id-p3::after{
+            content: '';
+            position: absolute;
+            inset: 7px;
+            background-image: url('https://media.istockphoto.com/id/839977330/vector/rock-paper-scissors-icons.jpg?s=612x612&w=0&k=20&c=zw4h9XhVAPxHYVY6eOzYHulKyLjq0OWBERlWRwyYMhI=');
+            background-position: center;
+            background-size: cover;
+            border-radius: 5px;
+        }
+        #pro1>#id-p4::before{
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 140%;
+            background-color: aqua;
+            animation: animate1 5s linear infinite;
+        }
+        #pro1>#id-p4::after{
+            content: '';
+            position: absolute;
+            inset: 7px;
+            background-image: url('https://t3.ftcdn.net/jpg/03/75/21/58/240_F_375215873_ld51qZjiMzZypOP102FMQro6zwLeI9Iu.jpg');
+            border-radius: 5px;
+        }
+        #pro1>#id-p5::before{
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 140%;
+            background-color: aqua;
+            animation: animate1 5s linear infinite;
+        }
+        #pro1>#id-p5::after{
+            content: '';
+            position: absolute;
+            inset: 7px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqLj4RkVultzraLgbphCZnSS-DCZsFbtrUzg&s');
+            background-position: center;
+            background-size: cover;
+            border-radius: 5px;
+        }
+        @keyframes animate1 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        #pro2{
+            height: 80px;
+            width: 1310px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #pro2>.project-tile{
+            color: black;
+            font-size: 22px;
+        }
+        .project-tile>button{
+            height: 35px;
+            width: 250px;
+            font-size: 20px;
+            background-color: aquamarine;
+            border-radius: 15px;
+        }
+        #about{
+            height: 100%;
+            width: 100%;
+            padding: 100px;
+        }
+        #about>p>span{
+            font-size: 95px;
+            font-weight: bold;
+        }
+        #about>p{
+            text-align: center;
+            font-size: 42px;
+        }
+        #about>p>img{
+            width: 70px;
+            margin-bottom: -5px;
+        }
+        .foot{
+            width: 450px;
+            height: 90px;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #profile-link>img{
+            width: 60px;
+            border-radius: 15px;
+        }
+        .foot1{
+           height: 80px;
+           width: 115.27%;
+           margin-top: 180px;
+           margin-left: -100px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           background-color: #000033;
+           color: aliceblue;
+        }
+        @media (max-width: 768px) {
+            body {
+                border: none;
+            }
+
+            #navbar {
+                padding: 5px;
+            }
+
+            .nav-but {
+                margin: 3px 0;
+                width: 80px;
+                font-size: 14px;
+            }
+
+            #welcome-section>#div1>h1 {
+                font-size: 24px;
+            }
+
+            .box {
+                height: 150px;
+                width: 150px;
+            }
+
+            .p1 {
+                height: 150px;
+                width: 150px;
+            }
+
+            #pro2>.project-tile>button {
+                width: 150px;
+            }
+
+            #about>p {
+                font-size: 20px;
+            }
+
+            .foot {
+                width: 100%;
+            }
+
+            .foot1 {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="head">
+        <nav id="navbar">
+        <a href="#welcome-section"><button class="nav-but">HOME</button></a>
+        <a href="#projects"><button class="nav-but">PROJECTS</button></a>
+        <a href="#about"><button class="nav-but">ABOUT</button></a>
+    </nav>
+    </header>
+    
+    <main id="main">
+        <section id="welcome-section">
+            <div id="div1">
+                <h1>WELCOME TO MY PORTFOLIO</h1>
+            </div>
+            <div id="div2">
+                <div class="half" id="half1">
+                    <p><span>Hey,</span> <br> <span>i am pranav u godabole</span> <br> A Web Developer.</p>
+                </div>
+                <div class="half" id="half2">
+                    <div class="box"></div>
+                </div>
+            </div>
+            
+        </section><hr>
+        <section id="projects">
+            <div class="div-h1">
+                <h1>EXPLORE MY PROJECTS HERE</h1>
+            </div>
+            <div class="div-pro">
+                <div id="pro1">
+                    <div class="p1" id="id-p1"></div>
+                    <div class="p1" id="id-p2"></div>
+                    <div class="p1" id="id-p3"></div>
+                    <div class="p1" id="id-p4"></div>
+                    <div class="p1" id="id-p5"></div>
+                </div>
+                <div id="pro2">
+                    <a href="https://codepen.io/Prerana-A-Deshpande/full/pvzZbWw" class="project-tile"><button>Product Landing Page</button></a>
+                    <a href="https://codepen.io/Prerana-A-Deshpande/full/gbYjeeb" class="project-tile"><button>Dragon Repeller Game</button></a>
+                    <a href="https://codepen.io/Prerana-A-Deshpande/full/XJrBEoY" class="project-tile"><button>Rock Paper Scissor</button></a>
+                    <a href="https://codepen.io/Prerana-A-Deshpande/full/RNbBMON" class="project-tile"><button>Calculator</button></a>
+                    <a href="https://codepen.io/Prerana-A-Deshpande/full/LEPBddM" class="project-tile"><button>Tribute Page</button></a>
+                </div>
+                
+            </div>
+          
+        </section><hr>
+        <section id="about">
+            <p><span>Let's work together ..</span><br> When shall we have a cup of <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVSnhm4GXwj2giYQwyXnNsivzgJG6napPRhq3iJvwdtV4SxpzI5S2g0Hyg9kpwc7Aqr8o&usqp=CAU" alt="">?</p>
+            <div class="foot">
+                <a href="" id="profile-link" target="_blank"><img src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338393_1280.png" alt=""></a>
+            <a href="" id="profile-link" target="_blank"><img src="https://cdn-icons-png.freepik.com/256/15707/15707884.png?semt=ais_hybrid" alt=""></a>
+            <a href="" id="profile-link" target="_blank"><img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" alt=""></a>
+            </div>
+            <div class="foot1">
+                    <h1>@ copyrights 2025</h1>
+            </div>
+            
+        </section>
+    </main>
+    
+    
+</body>
+</html>
